@@ -39,9 +39,12 @@ namespace V.M.C_s_Shield_Health_Spillover
             ShowHUD();
             LevelUp();
             ShowHUD();
-            AddXP(850);
+            AddXP(1050);
             ShowHUD();
             LevelUp();
+            LevelUp();
+            ShowHUD();
+            AddXP(400);
             LevelUp();
             ShowHUD();
             Console.ReadKey(true);
@@ -89,7 +92,11 @@ namespace V.M.C_s_Shield_Health_Spillover
                 currentLevel += 1;
                 currentHealth += 35;
                 MaxHealth += 25;
-                if (currentHealth > MaxHealth)
+                if (MaxHealth >= 200)
+                {
+                    MaxHealth = 200;
+                }
+                if (currentHealth >= MaxHealth)
                 {
                     currentHealth = MaxHealth;
                 }
