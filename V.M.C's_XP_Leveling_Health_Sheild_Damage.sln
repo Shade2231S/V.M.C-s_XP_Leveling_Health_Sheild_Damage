@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36429.23 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "V.M.C's_XP_Leveling_Health_Sheild_Damage", "V.M.C's_XP_Leveling_Health_Sheild_Damage\V.M.C's_XP_Leveling_Health_Sheild_Damage.csproj", "{83C02327-9C2B-4DE6-9DD2-62D1D810D076}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{83C02327-9C2B-4DE6-9DD2-62D1D810D076}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83C02327-9C2B-4DE6-9DD2-62D1D810D076}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83C02327-9C2B-4DE6-9DD2-62D1D810D076}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83C02327-9C2B-4DE6-9DD2-62D1D810D076}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7260D397-03C8-4401-8547-CC2E04099E9E}
+	EndGlobalSection
+EndGlobal
