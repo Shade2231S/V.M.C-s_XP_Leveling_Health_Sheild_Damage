@@ -19,14 +19,17 @@ namespace V.M.C_s_Shield_Health_Spillover
         static ConsoleColor HUDColor = ConsoleColor.DarkGreen;
         static ConsoleColor xpColor = ConsoleColor.DarkBlue;
         static ConsoleColor Damagecolor = ConsoleColor.DarkRed;
+        static ConsoleColor LevelUpColor = ConsoleColor.DarkCyan;
         static void Main(string[] args)
         {
             Console.ForegroundColor = TextColor;
             currentHealth = MaxHealth;
             ShowHUD();
             AddXP(50);
+            LevelUp();
             ShowHUD();
             AddXP(60);
+            LevelUp();
             ShowHUD();
             AddXP(120);
             ShowHUD();
@@ -34,7 +37,12 @@ namespace V.M.C_s_Shield_Health_Spillover
             ShowHUD();
             AddXP(180);
             ShowHUD();
-            AddXP(250);
+            LevelUp();
+            ShowHUD();
+            AddXP(850);
+            ShowHUD();
+            LevelUp();
+            LevelUp();
             ShowHUD();
             Console.ReadKey(true);
             Console.Clear();
@@ -46,13 +54,14 @@ namespace V.M.C_s_Shield_Health_Spillover
             {
                isDead = true;
             }
-            if (currentHealth > MaxHealth)
+            else
             {
-                currentHealth = MaxHealth;
+                isDead = false;
             }
-            Console.ForegroundColor = HUDColor;
+                Console.ForegroundColor = HUDColor;
             Console.WriteLine("======================");
-            Console.WriteLine("Health - " + currentHealth);
+            Console.WriteLine("Current Health - " + currentHealth);
+            Console.WriteLine("Max Health - " + MaxHealth);
             Console.WriteLine("XP - " + currentXP);
             Console.WriteLine("Xp Required - " + XPAmountToLevel);
             Console.WriteLine("Level - " + currentLevel);
@@ -67,18 +76,35 @@ namespace V.M.C_s_Shield_Health_Spillover
             Console.WriteLine("%%%%%%%%%%%%%%%%");
             Console.WriteLine("You earned XP! - " + xpAdded);
             Console.WriteLine("%%%%%%%%%%%%%%%%");
+
+            Console.ForegroundColor = TextColor;
+        }
+        static void LevelUp()
+        {
+            Console.ForegroundColor = LevelUpColor;
             if (currentXP >= XPAmountToLevel)
             {
                 currentXP = currentXP - XPAmountToLevel;
                 XPAmountToLevel += 100;
                 currentLevel += 1;
-                currentHealth += 25;
+                currentHealth += 35;
                 MaxHealth += 25;
+                if (currentHealth > MaxHealth)
+                {
+                    currentHealth = MaxHealth;
+                }
                 Console.WriteLine("*****************");
                 Console.WriteLine("You Leveled Up!");
                 Console.WriteLine("*****************");
-                Console.ForegroundColor = TextColor;
+
             }
+            else
+            {
+                Console.WriteLine("*****************");
+                Console.WriteLine("Not enough XP!");
+                Console.WriteLine("*****************");
+            }
+                Console.ForegroundColor = TextColor;
         }
         static void TakeDamage(int damage)
         {
